@@ -1,12 +1,14 @@
+import Header from "./components/Header"
+import Formulario from "./components/Formulario"
+import ListadoPacientes from "./components/ListadoPacientes"
 
 function App() {
 
-  const edad= 18;
-
   return (
     <>
-      <h1>Hola mundo</h1>
-      {edad >= 18 ? 'eres mayor' : 'eres menor'}
+      <Header/>
+      <Formulario/>
+      <ListadoPacientes/>
     </>
   )
 }
