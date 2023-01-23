@@ -18,11 +18,9 @@ const Formulario = () => {
       console.log('Hay al menos un campo vacío')
 
       setError(true)
-    } else {
-      console.log('Todos llenos')
-    }
-
-    console.log('enviando formulario')
+      return;
+    } 
+      setError(false)
   }
 
   return (
