@@ -8,13 +8,25 @@ const Formulario = () => {
   const [fecha, setFecha] = useState('');
   const [sintomas, setSintomas] = useState(''); // declaracion de state por orden de componente
 
+  const [error, setError] = useState(false)
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // validacion de formulario 
+    if([nombre, propietario, email, fecha, sintomas].includes('')) { // arreglo
+      console.log('Hay al menos un campo vacío')
+
+      setError(true)
+    } else {
+      console.log('Todos llenos')
+    }
+
     console.log('enviando formulario')
   }
 
   return (
-  <div className="md:w-1/2 lg:w-2/5">
+  <div className="md:w-1/2 lg:w-2/5 mx-5">
 
     <h2 className="font-black text-xl text-center ">Seguimiento pacientes</h2>
 
@@ -26,6 +38,7 @@ const Formulario = () => {
       onSubmit={handleSubmit}
       className="bg-white shadow-md rounded-lg py-5 px-5 mb-5">
 
+      {error ? 'Si hay un error': 'No hay error'}
       <div className="mb-3"> 
         <label htmlFor="mascota" className="block text-gray-700 uppercase font-bold text-sm"> 
           Nombre mascota:
