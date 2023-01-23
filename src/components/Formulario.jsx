@@ -4,11 +4,9 @@ const Formulario = () => {
 
   const [nombre, setNombre] = useState('');
 
-  const handerSubmit = (e) => {
-    e.preventDefault();
-    console.log('Enviando formulario')
+  const handleSubmit = () => {
+    console.log('enviando formulario')
   }
-
 
   return (
   <div className="md:w-1/2 lg:w-2/5">
@@ -20,7 +18,7 @@ const Formulario = () => {
     </p>
 
     <form 
-      onSubmit={handleSubmit} 
+      onSubmit={handleSubmit}
       className="bg-white shadow-md rounded-lg py-5 px-5 mb-5">
 
       <div className="mb-3"> 
