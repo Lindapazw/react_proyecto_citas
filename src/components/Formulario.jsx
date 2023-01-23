@@ -38,7 +38,12 @@ const Formulario = () => {
       onSubmit={handleSubmit}
       className="bg-white shadow-md rounded-lg py-5 px-5 mb-5">
 
-      {error ? 'Si hay un error': 'No hay error'}
+      {error && 
+        <div className='bg-red-700 text-center text-white p-1 font-bold mb-2 rounded-md'>
+          <p>Todos los campos son obligatorios</p>
+        </div>
+      }
+
       <div className="mb-3"> 
         <label htmlFor="mascota" className="block text-gray-700 uppercase font-bold text-sm"> 
           Nombre mascota:

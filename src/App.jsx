@@ -6,7 +6,7 @@ import Paciente from "./components/Paciente"
 function App() {
 
   return (
-    <div className="container mx-auto mt-10">
+    <div className="container mx-auto mt-5">
         <Header/>
 
       <div className="mt-12 md:flex">
