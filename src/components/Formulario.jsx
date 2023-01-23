@@ -27,7 +27,7 @@ const Formulario = () => {
             placeholder="Nombre de la mascota" 
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
             value={nombre}
-            onChange={() => console.log('escribiendo...')}
+            onChange={(e) => setNombre(e.target.value)}
           />
       </div>
 
