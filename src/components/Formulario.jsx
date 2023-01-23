@@ -4,7 +4,8 @@ const Formulario = () => {
 
   const [nombre, setNombre] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log('enviando formulario')
   }
 
