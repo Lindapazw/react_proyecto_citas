@@ -25,7 +25,7 @@ const Formulario = () => {
             id="mascota"
             type="text" 
             placeholder="Nombre de la mascota" 
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            className="border-2 w-full p-1 mt-1 placeholder-gray-400 rounded-md"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
           />
@@ -40,7 +40,7 @@ const Formulario = () => {
             id="propietario"
             type="text" 
             placeholder="Nombre del propietario" 
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            className="border-2 w-full p-1 mt-1 placeholder-gray-400 rounded-md"
           />
       </div>
 
@@ -53,7 +53,7 @@ const Formulario = () => {
             id="email"
             type="text" 
             placeholder="Email del propietario" 
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            className="border-2 w-full p-1 mt-1 placeholder-gray-400 rounded-md"
           />
       </div>
 
@@ -65,7 +65,7 @@ const Formulario = () => {
           <input 
             id="alta"
             type="date" 
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            className="border-2 w-full p-1 mt-1 placeholder-gray-400 rounded-md"
           />
       </div>
 
@@ -76,7 +76,7 @@ const Formulario = () => {
 
         <textarea 
         id="sintomas" 
-        className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" 
+        className="border-2 w-full p-1 mt-1 placeholder-gray-400 rounded-md" 
         placeholder="Describe los síntomas">           
         </textarea>
       </div>
@@ -84,7 +84,7 @@ const Formulario = () => {
 
       <input 
       type="submit" 
-      className=" bg-indigo-600 w-full p-2 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-all"
+      className=" bg-indigo-600 w-full p-1 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-all"
       value="agregar paciente"
       />
       
