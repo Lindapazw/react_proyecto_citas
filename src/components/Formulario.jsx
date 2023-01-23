@@ -3,6 +3,10 @@ import {useState, useEffect} from 'react';
 const Formulario = () => {
 
   const [nombre, setNombre] = useState('');
+  const [propietario, setPropietario] = useState('');
+  const [email, setEmail] = useState('');
+  const [fecha, setFecha] = useState('');
+  const [sintomas, setSintomas] = useState(''); // declaracion de state por orden de componente
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,6 +51,8 @@ const Formulario = () => {
             type="text" 
             placeholder="Nombre del propietario" 
             className="border-2 w-full p-1 mt-1 placeholder-gray-400 rounded-md"
+            value={propietario}
+            onChange={(e) => setPropietario(e.target.value)}
           />
       </div>
 
@@ -60,6 +66,8 @@ const Formulario = () => {
             type="text" 
             placeholder="Email del propietario" 
             className="border-2 w-full p-1 mt-1 placeholder-gray-400 rounded-md"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
       </div>
 
@@ -72,6 +80,8 @@ const Formulario = () => {
             id="alta"
             type="date" 
             className="border-2 w-full p-1 mt-1 placeholder-gray-400 rounded-md"
+            value={fecha}
+            onChange={(e) => setFecha(e.target.value)}
           />
       </div>
 
@@ -83,7 +93,10 @@ const Formulario = () => {
         <textarea 
         id="sintomas" 
         className="border-2 w-full p-1 mt-1 placeholder-gray-400 rounded-md" 
-        placeholder="Describe los síntomas">           
+        placeholder="Describe los síntomas"
+        value={sintomas}
+        onChange={(e) => setSintomas(e.target.value)}
+        >           
         </textarea>
       </div>
 
