@@ -2,16 +2,16 @@ const Formulario = () => {
   return (
 <div className="md:w-1/2 lg:w-2/5">
 
-  <h2 className="font-black text-2xl text-center">Seguimiento pacientes</h2>
+  <h2 className="font-black text-xl text-center ">Seguimiento pacientes</h2>
 
-  <p className="text-lg mt-5 text-center mb-10"> Añade pacientes y {''} 
-    <span className="text-indigo-600 font-bold "> Administralos</span>
+  <p className="mt-1 text-center mb-10 text-lm"> Añade pacientes y {''} 
+    <span className="text-indigo-600 font-bold "> administralos</span>
   </p>
 
-  <form className="bg-white shadow-md rounded-lg py-5 px-5 mb-10">
+  <form className="bg-white shadow-md rounded-lg py-5 px-5 mb-5">
 
-    <div className="mb-5"> 
-      <label htmlFor="mascota" className="block text-gray-700 uppercase font-bold"> 
+    <div className="mb-3"> 
+      <label htmlFor="mascota" className="block text-gray-700 uppercase font-bold text-sm"> 
         Nombre mascota:
       </label>
 
@@ -23,8 +23,8 @@ const Formulario = () => {
         />
     </div>
 
-    <div className="mb-5"> 
-      <label htmlFor="propietario" className="block text-gray-700 uppercase font-bold"> 
+    <div className="mb-3"> 
+      <label htmlFor="propietario" className="text-sm block text-gray-700 uppercase font-bold"> 
         Nombre propietario:
       </label>
 
@@ -36,8 +36,8 @@ const Formulario = () => {
         />
     </div>
 
-    <div className="mb-5"> 
-      <label htmlFor="email" className="block text-gray-700 uppercase font-bold"> 
+    <div className="mb-3"> 
+      <label htmlFor="email" className="text-sm block text-gray-700 uppercase font-bold"> 
         Email:
       </label>
 
@@ -49,8 +49,8 @@ const Formulario = () => {
         />
     </div>
 
-    <div className="mb-5"> 
-      <label htmlFor="alta" className="block text-gray-700 uppercase font-bold"> 
+    <div className="mb-3"> 
+      <label htmlFor="alta" className="text-sm block text-gray-700 uppercase font-bold"> 
         Alta:
       </label>
 
@@ -61,8 +61,8 @@ const Formulario = () => {
         />
     </div>
 
-    <div className="mb-5"> 
-      <label htmlFor="sintomas" className="block text-gray-700 uppercase font-bold"> 
+    <div className="mb-3"> 
+      <label htmlFor="sintomas" className="text-sm block text-gray-700 uppercase font-bold"> 
         Síntomas:
       </label>
 
@@ -76,7 +76,7 @@ const Formulario = () => {
 
     <input 
     type="submit" 
-    className=" bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-all"
+    className=" bg-indigo-600 w-full p-2 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-all"
     value="agregar paciente"
     />
     
