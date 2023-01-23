@@ -4,6 +4,11 @@ const Formulario = () => {
 
   const [nombre, setNombre] = useState('');
 
+  const handerSubmit = (e) => {
+    e.preventDefault();
+    console.log('Enviando formulario')
+  }
+
 
   return (
   <div className="md:w-1/2 lg:w-2/5">
@@ -14,7 +19,9 @@ const Formulario = () => {
       <span className="text-indigo-600 font-bold "> administralos</span>
     </p>
 
-    <form className="bg-white shadow-md rounded-lg py-5 px-5 mb-5">
+    <form 
+      onSubmit={handleSubmit} 
+      className="bg-white shadow-md rounded-lg py-5 px-5 mb-5">
 
       <div className="mb-3"> 
         <label htmlFor="mascota" className="block text-gray-700 uppercase font-bold text-sm"> 
