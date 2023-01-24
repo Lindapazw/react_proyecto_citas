@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 
-const Formulario = ({setPacientes}) => {
+const Formulario = ({pacientes, setPacientes}) => {
 
   const [nombre, setNombre] = useState('');
   const [propietario, setPropietario] = useState('');
@@ -31,9 +31,9 @@ const Formulario = ({setPacientes}) => {
         sintomas
       }
 
-      console.log(objetoPaciente)
+      setPacientes([...pacientes, objetoPaciente]);
 
-      setPacientes(nombre)
+      // reiniciar el formulario
   }
 
   return (
