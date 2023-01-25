@@ -12,9 +12,9 @@ const ListadoPacientes = ({pacientes}) => {
           </span>
         </p>
 
-        { pacientes.map( (paciente, index ) => ( // creando variable temporal de paciente
+        { pacientes.map( (paciente ) => ( // creando variable temporal de paciente
             <Paciente
-              key={index}
+              key={paciente.id} // Id
               paciente={paciente}
             />
           ))}
