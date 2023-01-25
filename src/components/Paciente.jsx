@@ -1,12 +1,5 @@
-import { useEffect } from "react"
-
 const Paciente = ({paciente, setPaciente}) => {
 
-    useEffect(() => {
-        console.log('El componente esta listo')
-    },[]);
-
-    
     const {nombre, propietario, email, fecha, sintomas} = paciente // destructuring
 
     return (
