@@ -51,6 +51,12 @@ const Formulario = ({pacientes, setPacientes, paciente}) => {
         id: generarId()
       }
 
+      if(paciente.id) {
+        console.log('editando')
+      } else {
+        console.log('nuevo registro')
+      }
+
       setPacientes([...pacientes, objetoPaciente]);
 
       // c
