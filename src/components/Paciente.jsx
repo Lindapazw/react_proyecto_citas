@@ -1,5 +1,12 @@
-const Paciente = ({paciente}) => {
+import { useEffect } from "react"
 
+const Paciente = ({paciente, setPaciente}) => {
+
+    useEffect(() => {
+        console.log('El componente esta listo')
+    },[]);
+
+    
     const {nombre, propietario, email, fecha, sintomas} = paciente // destructuring
 
     return (
@@ -22,7 +29,8 @@ const Paciente = ({paciente}) => {
 
                 <div className="flex justify-between mt-5">
                     <button type="buttom"
-                    className="py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-md">
+                    className="py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-md"
+                    onClick={() => setPaciente(paciente)}>
                         Editar
                     </button>
 
