@@ -12,8 +12,9 @@ const Formulario = ({pacientes, setPacientes, paciente}) => {
   const [error, setError] = useState(false)
 
   useEffect (() => {
-    console.log(paciente); // evita re - render
+                         //  evita re - render
   }, [paciente])
+
 
   const generarId = () => { // generar id
     const random = Math.random().toString(36).substring(2);
