@@ -1,6 +1,7 @@
 import Paciente from "./Paciente"
 
-const ListadoPacientes = () => {
+const ListadoPacientes = ({pacientes}) => {
+
     return (
       <div className="md:w-1/2 lg:w-3/5 h-screen overflow-scroll">
         <h2 className=" font-black text-xl text-center">Listado de pacientes</h2>
@@ -11,14 +12,13 @@ const ListadoPacientes = () => {
           </span>
         </p>
 
-        <Paciente/>
-        <Paciente/>
-        <Paciente/>
-        <Paciente/>
-        <Paciente/>
-        <Paciente/>
-        <Paciente/>
-        <Paciente/>
+        { pacientes.map( (paciente) => ( // creando variable temporal de paciente
+            <Paciente
+              paciente={paciente}
+            />
+          ))}
+
+
       </div>
     )
   }
