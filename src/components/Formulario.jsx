@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import Error from './Error';
 
-const Formulario = ({pacientes, setPacientes}) => {
+const Formulario = ({pacientes, setPacientes, paciente}) => {
 
   const [nombre, setNombre] = useState('');
   const [propietario, setPropietario] = useState('');
@@ -10,6 +10,10 @@ const Formulario = ({pacientes, setPacientes}) => {
   const [sintomas, setSintomas] = useState(''); // declaracion de state por orden de componente
 
   const [error, setError] = useState(false)
+
+  useEffect (() => {
+    console.log(paciente); // evita re - render
+  }, [paciente])
 
   const generarId = () => { // generar id
     const random = Math.random().toString(36).substring(2);
