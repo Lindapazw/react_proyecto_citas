@@ -13,11 +13,12 @@ const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
             buttons: true,
             dangerMode: true,
             })
-            
             .then((willDelete) => {
                 if (willDelete) {
+                eliminarPaciente(id), // eliminar paciente
                 swal("¡Bien! tu archivo a sido eliminado correctamente", {
                 icon: "success",
+                
                 });
                 } else {
                 swal("Tu archivo no se elimino");
@@ -25,9 +26,8 @@ const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
             }); 
 
 
-        if(respuesta) {
-            eliminarPaciente(id) // eliminar paciente
-        }
+
+        
     }
 
     return (
