@@ -10,6 +10,14 @@ function App() {
   const [paciente, setPaciente] = useState({});
 
   useEffect(() => {
+    const obtenerLS = () => {
+      const pacientesLS = JSON.parse(localStorage.getItem('pacientes')) ?? []; // si no hay nada en arreglo vacio, agregale un null
+      setPacientes(pacientesLS) // con este código ya no resetea el storage
+      obtenerLS();
+    }
+  },[]);
+
+  useEffect(() => {
     localStorage.setItem('pacientes', JSON.stringify(pacientes)); // agregando localStorage para los pacientes
   }, [pacientes])
 
