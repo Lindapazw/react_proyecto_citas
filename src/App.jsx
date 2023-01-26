@@ -11,7 +11,6 @@ function App() {
 
   const eliminarPaciente = (id) => {
     const pacientesActualizados = pacientes.filter( paciente => paciente.id !== id); // eliminar paciente del state
-
     setPacientes(pacientesActualizados)
   }
 

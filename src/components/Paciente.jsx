@@ -1,26 +1,29 @@
-import swal from "sweetalert" // import sweetalert
+import swal from "sweetalert" // importando sweetalert
 
 const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
 
     const {nombre, propietario, email, fecha, sintomas, id} = paciente // destructuring
 
-    const handleEliminar = () => { // sweetalert sintax
+    const handleEliminar = () => {
+
         const respuesta = swal({
             title: "¿Estás seguro?",
-            text: "!Si lo eliminas, tu no podrás ver este archivo de nuevo!",
+            text: "Si lo eliminas, tu no podrás ver este archivo de nuevo",
             icon: "warning",
             buttons: true,
             dangerMode: true,
             })
+            
             .then((willDelete) => {
                 if (willDelete) {
-                swal("Bien! tu archivo a sido eliminado correctamente!", {
+                swal("¡Bien! tu archivo a sido eliminado correctamente", {
                 icon: "success",
                 });
                 } else {
-                swal("Tu archivo no se elimino!");
+                swal("Tu archivo no se elimino");
                 }
             }); 
+
 
         if(respuesta) {
             eliminarPaciente(id) // eliminar paciente
